@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {Route,Switch} from 'react-router-dom'
 import "./home.css"
-
+import CityQuery from './lx/cityQuery'
+import SearchCity from './lx/searchCity'
 
 export class Home extends Component {
     constructor(props) {
@@ -15,7 +16,8 @@ export class Home extends Component {
         return (
             <div>
             <Switch>
-                 <Route/>
+                 <Route path="/" component={CityQuery} exact/>
+                 <Route path="/searchCity" component={SearchCity}/>
             </Switch>   
             </div>
         )

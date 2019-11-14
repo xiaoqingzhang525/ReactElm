@@ -1,0 +1,137 @@
+#app {
+	color: #666666;
+}
+
+#header {
+	display: flex;
+	width: 100%;
+	height: 0.5rem;
+	background: #3190e8;
+	color: white;
+	font-size: 0.2rem;
+	display: flex;
+}
+
+#header span {
+	width: 50%;
+	line-height: 0.5rem;
+}
+
+#header>span:nth-of-type(1) {
+	text-align: left;
+	margin-left: 0.1rem;
+}
+
+#header>span:nth-of-type(2) {
+	text-align: right;
+	margin-right: 0.1rem;
+}
+
+#guess li {
+	font-size: 0.15rem;
+	border: 1px solid #eaeaea;
+	width: 100%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	background-color: #fff;
+	display: flex;
+	color: #666666;
+}
+
+#guess li span {
+	display: inline-block;
+}
+
+.lef1 {
+	width: 40%;
+	margin-left: 0.1rem;
+}
+
+.rig1 {
+	width: 50%;
+  margin-left: 0.42rem;
+  /* float: right; */
+  font-size: 0.12rem;
+}
+
+.lef2 {
+	width: 60%;
+	margin-left: 0.1rem;
+	font-size: 0.2rem;
+	color: #3190e8;
+}
+
+.rig2 {
+	line-height: 0.5rem;
+	font-size: 0.15rem;
+	width: 60%;
+	color: #666666;
+	text-align: right;
+	margin-right: 0.1rem;
+}
+
+#hot {
+	width: 100%;
+	background-color: #fff;
+	margin-top: 0.1rem;
+}
+
+#hot p {
+	font-size: 0.15rem;
+	margin-left: 0.1rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+}
+
+#hot ul {
+	font-size: 0.15rem;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#hot ul li {
+	box-sizing: border-box;
+	width: 25%;
+	border: 1px solid #eaeaea;
+	text-align: center;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	color: #3190e8;
+}
+
+.allGroups {
+  width: 100%;
+  margin-top: 0.1rem;
+  background-color: #fff;
+}
+
+.allGroup {
+	width: 100%;
+	background-color: #fff;
+	font-size: 0.15rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.allGroups p {
+	width: 100%;
+  height: 0.3rem;
+  font-size: 0.13rem;
+	line-height: 0.3rem;
+	border: 1px solid #eaeaea;
+	padding-left: 0.1rem;
+}
+
+.allGroup li {
+	width: 25%;
+	background-color: #fff;
+	box-sizing: border-box;
+	border: 1px solid #eaeaea;
+	text-align: center;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

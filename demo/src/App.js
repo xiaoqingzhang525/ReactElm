@@ -12,7 +12,6 @@ function App() {
       <BrowserRouter>
         <Home/>
       </BrowserRouter>
-      <p>app</p>
     </div>
   );
 }
