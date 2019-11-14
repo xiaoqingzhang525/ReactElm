@@ -5,6 +5,8 @@ import "./home.css"
 import Enter from './Enter'
 import DetailShops from './zxq/DetailShops'
 import Login from './zxq/Login'
+import CityQuery from './lx/cityQuery'
+import SearchCity from './lx/searchCity'
 
 export class Home extends Component {
     constructor(props) {
@@ -20,7 +22,9 @@ export class Home extends Component {
                     <Route path="/login" component={Login}/>
                     <Route path="/enter" component={Enter} />
                     <Route path="/detailShops" component={DetailShops} />
-                </Switch>
+                    <Route path="/" component={CityQuery} exact/>
+                 <Route path="/searchCity" component={SearchCity}/>
+                </Switch> 
             </div>
         )
     }
