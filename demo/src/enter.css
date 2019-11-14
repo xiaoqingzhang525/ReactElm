@@ -1,0 +1,19 @@
+footer{
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    display: flex;
+    background-color: #fff;
+}
+footer .icons{
+    width:25%;
+    height:0.5rem;
+    text-align: center;
+    color:#666666;
+    font-size: 0.15rem;
+}
+footer .icons span{
+    margin: 0.07rem;
+    color:#3190e8;
+}

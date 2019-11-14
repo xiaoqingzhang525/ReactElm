@@ -1,0 +1,128 @@
+#app {
+    position: relative;
+  }
+  .popupWindows {
+    width: 80%;
+    /* height: 2rem; */
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 9.5%;
+    /* border: 0.01rem solid red; */
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0.12rem;
+    overflow: hidden;
+    display: none;
+  }
+  .popupWindows .el-icon-warning-outline {
+    font-size: 1.2rem;
+    color: #f8cb86;
+  }
+  .popupWindows p:nth-of-type(2) {
+    font-size: 0.16rem;
+    color: #333333;
+  }
+  .popupWindows button {
+    width: 100%;
+    border: none;
+    font-size: 0.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4cd964;
+    line-height: 0.4rem;
+    margin-top: 0.22rem;
+  }
+  #pwdTitle {
+    width: 100%;
+    height: 0.5rem;
+    background: #3190e8;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #pwdTitle span:nth-child(1) {
+    margin-left: 0.12rem;
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    color: #fff;
+  }
+  .pwdlogin {
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    color: white;
+    margin-left: 0.1rem;
+  }
+  .pwdlogin {
+    display: inline;
+    font-size: 0.2rem;
+    margin-left: 1.05rem;
+  }
+  #inpLogin {
+    margin-top: 0.65rem;
+    background-color: #fff;
+  }
+  #inpLogin > div {
+    border-bottom: 0.0119rem solid #f1f1f1;
+    overflow: hidden;
+  }
+  #inpLogin input {
+    line-height: 0.5rem;
+    font-size: 0.17rem;
+    padding-left: 0.14rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .el-icon-view {
+    color: #d2d2d2;
+    float: right;
+    margin-right: 0.22rem;
+    margin-top: 0.17rem;
+  }
+  #inpLogin > div img {
+    margin-top: 0.09rem;
+  }
+  #imgRight {
+    overflow: hidden;
+    width: 0.4rem;
+    float: right;
+    margin-right: 0.18rem;
+  }
+  .vagueBtn {
+    float: right;
+    font-size: 0.13rem;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 0.12rem;
+    margin-top: 0.09rem;
+  }
+  .changeImg {
+    color: #3190e8;
+    /* margin-top: 0.05rem; */
+  }
+  .hint {
+    color: red;
+    font-size: 0.12rem;
+  }
+  .hint:nth-child(2) {
+    margin-top: 0.12rem;
+    margin-bottom: 0.11rem;
+  }
+  #btnLogin {
+    /* border: 1px solid red; */
+    margin-left: 0.11rem;
+    margin-top: 0.11rem;
+    margin-right: 0.11rem;
+  }
+  .loginBtn {
+    background-color: #4cda64;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 0.17rem;
+    line-height: 0.4rem;
+    border-radius: 0.04rem;
+  }
+  #switch{
+      position: absolute;
+      right:0.1rem;
+      top:1.3rem;
+  }

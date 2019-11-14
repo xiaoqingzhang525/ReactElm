@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 // 引入路由
 import {BrowserRouter} from "react-router-dom"
 // home是最大的路由出口
@@ -12,7 +13,6 @@ function App() {
       <BrowserRouter>
         <Home/>
       </BrowserRouter>
-      <p>app</p>
     </div>
   );
 }
