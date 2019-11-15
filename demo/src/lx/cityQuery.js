@@ -81,16 +81,16 @@ export class cityQuery extends Component {
                 {/* 定位城市 */}
                 <ul id="guess">
                     <li>
-                        <span class="lef1">当前定位城市：</span>
-                        <span class="rig1">定位不准,请在城市列表中选择</span>
+                        <span className="lef1">当前定位城市：</span>
+                        <span className="rig1">定位不准,请在城市列表中选择</span>
                     </li>
                     <li onClick={this.enter.bind(this, this.state.guess)}>
-                        <span class="lef2">
+                        <span className="lef2">
                             <span>{this.state.guess.name}
                                 {/*v-show="showG"  {{ guess.name }} */}
                             </span>
                         </span>
-                        <span class="el-icon-arrow-right rig2"></span>
+                        <span className="el-icon-arrow-right rig2"></span>
                     </li>
                 </ul>
                 {/* 热门城市 */}
