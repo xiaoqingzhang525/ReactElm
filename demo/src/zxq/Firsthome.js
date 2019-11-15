@@ -4,6 +4,7 @@ import Swiper from "swiper"
 import "../../node_modules/swiper/css/swiper.min.css"
 import { Rate } from 'element-react';
 import 'element-theme-default';
+import {withRouter} from "react-router-dom"
 
 export class Firsthome extends Component {
     constructor(props) {
@@ -144,4 +145,4 @@ export class Firsthome extends Component {
     }
 }
 
-export default Firsthome
+export default withRouter(Firsthome)

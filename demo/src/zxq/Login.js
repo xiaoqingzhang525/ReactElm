@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './login.css'
-// const qs = require("querystring")
+import {withRouter} from "react-router-dom"
 
 import { Switch } from 'element-react';
 import 'element-theme-default';
@@ -13,6 +13,7 @@ export class Login extends Component {
             types: "password",
             isT: false
         }
+        this.backlast = this.backlast.bind(this);
     }
     componentWillMount() {
         this.getYanzheng();
@@ -80,14 +81,15 @@ export class Login extends Component {
         }
     }
     // 点击返回
-    back(){
-        this.history.go(-1);
+    backlast(){
+        this.props.history.push("/cityQuery");
+        console.log("登录")
     }
     render() {
         return (
             <div>
                 <div id="pwdTitle">
-                    <span className="el-icon-arrow-left" onClick={this.back}></span>
+                    <span className="el-icon-arrow-left" onClick={this.backlast}></span>
                     <p className="pwdlogin">密码登录</p>
                 </div>
                 <div id="inpLogin">
@@ -136,4 +138,4 @@ export class Login extends Component {
     }
 }
 
-export default Login
+export default withRouter(Login)

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './searchCity.css'
+import {withRouter} from "react-router-dom"
 
 export class searchCity extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ export class searchCity extends Component {
             arrKey: [],
             arrObj: [],
         }
+        this.back = this.back.bind(this)
     }
     componentWillMount() {
         this.setState({
@@ -40,13 +42,16 @@ export class searchCity extends Component {
                 console.log(err)
             })
     }
+    back(){
+        this.props.history.push("/cityQuery");
+    }
     render() {
         return (
             <div id="app">
                 <div id="header">
-                    <span className="el-icon-arrow-left lef" onClick="back()"></span>
+                    <span className="el-icon-arrow-left lef" onClick={this.back}></span>
                     <span className="cen">{this.state.obj.name}</span>
-                    <span className="rig" onClick="back()">切换城市</span>
+                    <span className="rig" onClick={this.back}>切换城市</span>
                 </div >
                 <div id="inp">
                     <input type="text" placeholder="输入学校、商务楼、地址" v-model="inpCon" />
@@ -71,4 +76,4 @@ export class searchCity extends Component {
     }
 }
 
-export default searchCity
+export default withRouter(searchCity)

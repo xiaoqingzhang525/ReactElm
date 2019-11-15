@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './cityQuery.css'
+import {withRouter} from "react-router-dom"
 
 
 export class cityQuery extends Component {
@@ -20,7 +21,8 @@ export class cityQuery extends Component {
     }
     //登录跳转
     login() {
-
+        this.props.history.push("/login");
+        console.log("登录")
     }
     componentWillMount() {
         // 热门城市
@@ -74,7 +76,7 @@ export class cityQuery extends Component {
             <div id="app">
                 <div id="header">
                     <span>ele.me</span>
-                    <span onClick={this.state.login}>登录|注册</span>
+                    <span onClick={this.login}>登录|注册</span>
                 </div>
                 {/* 定位城市 */}
                 <ul id="guess">
@@ -133,4 +135,4 @@ export class cityQuery extends Component {
     }
 }
 
-export default cityQuery
+export default withRouter(cityQuery)

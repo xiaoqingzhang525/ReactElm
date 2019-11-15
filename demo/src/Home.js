@@ -23,6 +23,7 @@ export class Home extends Component {
                     <Route path="/enter" component={Enter} />
                     <Route path="/detailShops" component={DetailShops} />
                     <Route path="/" component={CityQuery} exact/>
+                    <Route path="/cityQuery" component={CityQuery}/>
                  <Route path="/searchCity" component={SearchCity}/>
                 </Switch> 
             </div>

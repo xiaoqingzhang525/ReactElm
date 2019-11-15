@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./detailShops.css"
+import {withRouter} from "react-router-dom"
 
 export class DetailShops extends Component {
     constructor(props) {
@@ -29,4 +30,4 @@ export class DetailShops extends Component {
     }
 }
 
-export default DetailShops
+export default withRouter(DetailShops)
