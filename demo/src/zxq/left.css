@@ -1,0 +1,619 @@
+#classify {
+    border:1px solidr red;
+    width:100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  .classifyL {
+    width: 25%;
+    height:4.4rem;
+    float: left;
+    overflow: scroll;
+    font-size: 0.15rem;
+    /* overflow-y: visible; */
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+  .classifyL li {
+    width: 100%;
+    height: 0.7rem;
+    box-sizing: border-box;
+    padding-left: 0.15rem;
+    line-height: 0.7rem;
+    border: 0.2px solid #eaeaea;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+  .classifyL li:nth-child(1){
+    background-color: white;
+  } 
+  .classifyL li:nth-child(1) .silder{
+      display: block;
+  }
+  .classifyL li:nth-child(1) span:nth-child(3){
+    display: inline-block;
+  }
+  .pointRed{
+    width:0.2rem;
+    height:0.2rem;
+    line-height: 0.2rem;
+    color:white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    background-color:red;
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+  .classifyL img {
+    width: 0.15rem;
+  }
+  .silder {
+    display: inline-block;
+    width: 0.05rem;
+    height: 0.7rem;
+    background-color: #3190e8;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    transition: 0.3s;
+    display: none;
+  }
+  #classifyR {
+    float: right;
+    font-size: 0.15rem;
+    color: #666666;
+    width: 75%;
+    height:4.4rem;
+    overflow: auto;
+  }
+  #classifyR ul{
+    position: relative;
+  }
+  #classifyR h2 {
+    width: 100%;
+    height: 0.6rem;
+    border: 1px solid #eaeaea;
+  }
+  #classifyR h2 p {
+    display: inline-block;
+    font-size: 0.2rem;
+    font-weight: 600;
+    width:0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 0.1rem;
+    line-height: 0.6rem;
+  }
+  #classifyR h2 span:nth-of-type(1) {
+    display: inline-block;
+    font-size: 0.12rem;
+    width:1.2rem;
+    height:0.5rem;
+    line-height: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #classifyR h2 span:nth-of-type(2) {
+    font-size: 0.12rem;
+    float: right;
+    margin-right: 0.15rem;
+    margin-top: 0.22rem;
+  }
+  #classifyR h2 span:nth-of-type(3) {
+    font-size: 0.12rem;
+    float: right;
+    position: absolute;
+    right:0.3rem;
+    top: 0.45rem;
+    z-index: 1000;
+    height:0.2rem;
+    line-height: 0.2rem;
+    border-radius: 0.05rem;
+    color:white;
+    padding:0.1rem;
+    transform: scale(0,0);
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.3s;
+    transform-origin:100% 0%;
+  }
+  #classifyR h2 span:nth-of-type(3) small {
+    display: inline-block;
+    width:0;
+    height:0;
+    border:8px solid transparent;
+    border-bottom: 8px solid rgba(0,0,0,0.5);
+    position: absolute;
+    right:2px;
+    top:-16px;
+  }
+  #classifyR li {
+    box-sizing: border-box;
+    padding: 0.1rem 0.15rem;
+    display: flex;
+    background: #fff;
+    /* position: relative; */
+  }
+  #classifyR li:nth-of-type(1){
+    background-color: #fff;
+  }
+  #classifyR li img {
+    width: 25%;
+    height: 0.6rem;
+  }
+  #classifyR li div {
+    width: 70%;
+    margin-left: 0.1rem;
+  }
+  #classifyR li div h5 {
+    font-size: 0.18rem;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #classifyR li div span:nth-of-type(1) {
+    display: block;
+    margin-top: 0.05rem;
+    margin-bottom: 0.05rem;
+    font-size: 0.1rem;
+  }
+  #classifyR li div span:nth-of-type(2) {
+    font-size: 0.12rem;
+    color: black;
+    display: block;
+  }
+  #classifyR li div span:nth-of-type(3) {
+    font-size: 0.12rem;
+    color: orangered;
+    display: inline-block;
+    border: 1px solid orangered;
+    border-radius: 0.05rem;
+    margin-top: 0.05rem;
+    margin-bottom: 0.05rem;
+  }
+  #classifyR li div .prices span:nth-of-type(1) {
+    display: inline-block;
+    color: orangered;
+    font-size: 0.16rem;
+    font-weight: 600;
+  }
+  #classifyR li div p .isT {
+    padding: 0.03rem;
+    font-size: 0.12rem;
+    border-radius: 0.05rem;
+    margin-top: 0.03rem;
+    background-color: #3190e8;
+    float: right;
+    color: white;
+  }
+  #classifyR li div p .btn1, #classifyR li div p .btn2{
+    background-color: #3190e8;
+    padding: 0.05rem;
+    width: 0.13rem;
+    height: 0.13rem;
+    border-radius: 50%;
+    line-height: 0.1rem;
+    margin-left: 0.1rem;
+    float: right;
+    position: relative;
+  }
+  #classifyR li div p .btn1 .fly{
+position: absolute;
+top:0rem;
+left:0rem;
+z-index: 10;
+background-color: #3190e8;
+width: 0.13rem;
+height: 0.13rem;
+padding: 0.05rem;
+border-radius: 50%;
+  }
+  #classifyR li div p .count{
+    float: right;
+    margin-left: 0.1rem;
+    margin-top: 0.05rem;
+  }
+  /* 选规格 */
+  #speciMask{
+    color:black;
+    width:2rem;
+    height:1.7rem;
+    background-color:white;
+    border-radius: 0.05rem;
+    position: fixed;
+    left:1rem;
+    top:2.5rem;
+    z-index: 200;
+    overflow: hidden;
+    display: none;
+    border:1px solid #3190e8;
+  }
+  #speciMask p:nth-of-type(1){
+    text-align: center;
+    height: 0.3rem;
+    line-height: 0.3rem;
+  }
+  #speciMask p:nth-of-type(1)>span:nth-of-type(2){
+    float: right;
+    font-size: 0.20rem;
+    margin-right: 0.1rem;
+    margin-top: 0.05rem;
+  }
+  #speciMask p:nth-of-type(2) small{
+    display: block;
+    margin: 0.1rem;
+  }
+  .choseSpec{
+    float:left;
+    height:0.15rem;
+    margin: 0.05rem;
+    border:1px solid #eaeaea;
+    border-radius: 0.05rem;
+    padding:0.05rem;
+    color:black;
+    font-size: 0.16rem;
+  }
+  #speciMask p:nth-of-type(2) #pri{
+    color:orangered;
+    position: absolute;
+    left:0.1rem;
+    bottom:0.1rem;
+    font-size: 0.2rem;
+  }
+  #speciMask p .shopCar {
+    color: white;
+    float: right;
+    background-color:#3190e8;
+    width:0.7rem;
+    text-align: center;
+    height:0.3rem;
+    line-height: 0.3rem;
+    border-radius: 0.05rem;
+    position: absolute;
+    left:1.15rem;
+    bottom:0rem;
+  }
+  /* 点击打开的购物车 */
+  /* 黑色遮罩 */
+  #maskBlack{
+    width:100%;
+    height:6.2rem;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+  }
+  #openCar{
+    width:100%;
+    background-color:white;
+    z-index: 13;
+    position: fixed;
+    left:0;
+    bottom:0.5rem;
+    box-sizing: border-box;
+    border-bottom: none;
+    display: none;
+  }
+  #openCar #openCarp1 {
+    background-color: #eceff1;
+    height:0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.16rem;
+    display: flex;
+  }
+  #openCar #openCarp1 span:nth-of-type(1){
+    width:20%;
+    text-align: center;
+  }
+  #openCar #openCarp1 span:nth-of-type(2){
+    width:65%;
+    text-align: right;
+    line-height: 0.4rem;
+    font-size: 0.13rem;
+  }
+  #openCar #openCarp1 span:nth-of-type(3){
+    width:15%;
+    font-size: 0.13rem;
+    text-align: center;
+  }
+#openCar #openCarul1{
+  width:100%;
+}
+#openCar #openCarul1 li{
+  display: flex;
+}
+#openCar #openCarul1 li p:nth-of-type(1){
+  width:40%;
+  text-align: left;
+}
+#openCar #openCarul1 li p:nth-of-type(2){
+  width:40%;
+  text-align: center;
+}
+#openCar #openCarul1 li p:nth-of-type(3){
+  width:20%;
+  text-align: left;
+}
+#openCar #openCarul1 li p:nth-of-type(3) button{
+  background-color: #3190e8;
+  border-radius: 50%;
+  border:1px solid #3190e8;
+  color:white;
+}
+  /* 评价总 */
+  #comment {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+  }
+  ::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+}
+  #comment #total {
+    width: 100%;
+    height: 1.2rem;
+    display: flex;
+    background-color: #fff;
+    border:1px solid #eaeaea;
+    margin-bottom: 0.1rem;
+  }
+  #totalLeft {
+    width: 40%;
+    text-align: center;
+    font-size: 0.12rem;
+  }
+  #totalLeft span {
+    display: block;
+  }
+  #totalLeft span:nth-of-type(1) {
+    font-size: 0.23rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+    color: orangered;
+  }
+  #totalLeft span:nth-of-type(2) {
+    margin-bottom: 0.1rem;
+  }
+  #totalLeft span:nth-of-type(3) {
+    font-size: 0.13rem;
+    color: #666666;
+  }
+  #totalRight {
+    width: 60%;
+    box-sizing: border-box;
+    padding-left: 0.1rem;
+  }
+  #totalRight span {
+    display: block;
+    font-size: 0.12rem;
+  }
+  #totalRight span:nth-of-type(1) {
+    margin-top: 0.2rem;
+  }
+  #totalRight span:nth-of-type(2) {
+    margin: 0.1rem 0;
+  }
+  #totalRight small {
+    color:orangered;
+    margin-left: -0.2rem;
+  }
+  #totalRight span:nth-of-type(3) small {
+    color:#666666;
+    margin-left:0;
+  }
+  #totalRight strong{
+    display: inline-block;
+    font-size: 0.12rem;
+    margin-left: -0.2rem;
+    transform: scale(0.6,0.6);
+  }
+  /* 评价详情 */
+  #commentDetail{
+  width:100%;
+  }
+  #commentClass{
+  width:100%;
+  overflow: hidden;
+  font-size: 0.13rem;
+  }
+  #commentClass li {
+    float:left;
+   background-color: #ebf5ff;
+   margin: 0.05rem;
+   padding:0.08rem;
+   border-radius: 0.05rem;
+  }
+  #commentClass li:nth-of-type(1){
+    background-color: #3190e8;
+  }
+  #commentClass li:nth-of-type(3){
+    background-color: #eaeaea;
+    color:#666666;
+  }
+  #commentSingle{
+    width:100%;
+    padding:0.1rem;
+    box-sizing: border-box;
+    font-size: 0.12rem;
+  }
+  #commentSingle li{
+    box-sizing: border-box;
+    padding: 0.1rem;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    display:flex;
+  }
+  #commentSingle li>img{
+    width:15%;
+    height:0.5rem;
+    border-radius: 50%;
+  }
+  #commentSingle li>div{
+    width:85%;
+    box-sizing: border-box;
+    padding-left: 0.1rem;
+  }
+  #commentSingle li>div p{
+  margin: 0.05rem 0;
+  }
+  #commentSingle li p:nth-of-type(3) img{
+  width:0.8rem;
+  margin-right: 0.1rem;
+  }
+  #commentSingle li>div p:nth-of-type(2) span:nth-of-type(1){
+    display: inline-block;
+    margin-left:-0.25rem;
+    transform: scale(0.6,0.6);
+  }
+  #commentSingle li>div p:nth-of-type(2) span:nth-of-type(2){
+    margin-left:-0.25rem;
+    font-size: 0.13rem;
+    
+  }
+  #commentSingle li>div p:nth-of-type(4) span{
+    border:1px solid #eaeaea;
+    box-sizing: border-box;
+    padding:0.05rem;
+    border-radius: 0.05rem;
+    margin-bottom: -0.1rem;
+    display: inline-block;
+    width:0.6rem;
+    font-size: 0.13rem;
+    color:#666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #footers {
+    width:100%;
+    height:0.5rem;
+    background-color: red;position: fixed;
+    left:0;
+    bottom:0;
+    z-index: 300;
+    background-color: #3d3d3f;
+  }
+  #footers span{
+    background-color: #3d3d3f;
+    display: inline-block;
+    color:white;
+  }
+  #footers span:nth-of-type(1){
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 50%;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 0.3rem;
+    position: absolute;
+    left:0.1rem;
+    bottom: 0.15rem;
+    border:2px solid #535356;
+    animation-fill-mode:backwards;
+    animation-duration: 0.5s;
+  }
+  #carOn{
+    background-color: #3190e8;
+  }
+  .gapOn{
+    background-color: #4cd964;
+  }
+  #carOff{
+    background-color: #3d3d3f;
+  }
+ .gapOff{
+    background-color: #3d3d3f;
+  }
+  #footers span:nth-of-type(2){
+    position: absolute;
+    left:0.8rem;
+    height:0.5rem;
+    font-size: 0.18rem;
+  }
+  #footers span:nth-of-type(2) small{
+    margin: 0.07rem;
+    display: block;
+  }
+  #footers span:nth-of-type(3){
+    position: absolute;
+    right: 0;
+    height:0.5rem;
+    line-height: 0.5rem;
+    font-size: 0.18rem;
+    font-weight: 600;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+  }
+  #footers #zongshu{
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:-0.2rem;
+    left: 0.45rem;
+    z-index: 200;
+    color:white;
+    text-align: center;
+    line-height: 0.2rem;
+  }
+/* 食物详情 */
+#foodsDetail{
+  width:100%;
+  height:6.2rem;
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0;
+  background-color: white;
+  z-index: 70;
+  transform: translateX(4rem);
+  transition: 0.3s;
+}
+#foodsDetail header{
+  width:100%;
+  background-color: #3190e8;
+  height:0.5rem;
+  display: flex;
+}
+#foodsDetail header span:nth-of-type(1){
+  width:10%;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 0.2rem;
+}
+#foodsDetail header span:nth-of-type(2){
+  width:90%;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 0.2rem;
+}
+#foodsDetail p{
+  margin: 0.1rem;
+}
+#foodsDetail button{
+  width:0.2rem;
+  height: 0.2rem;
+  padding: 0.01rem;
+  border:none;
+  background-color: #3190e8;
+  border-radius: 50%;
+  font-size: 0.2rem;
+  color:white;
+  line-height: 0.2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+}

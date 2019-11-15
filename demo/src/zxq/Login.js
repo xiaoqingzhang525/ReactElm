@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './login.css'
 import {withRouter} from "react-router-dom"
-
+// element组件的使用
 import { Switch } from 'element-react';
 import 'element-theme-default';
+// 公共资源
+// export const {Provider,Consumer} = React.createContext("");
 
 export class Login extends Component {
     constructor(props) {
@@ -37,9 +39,32 @@ export class Login extends Component {
             console.log(err)
         })
     }
-    // 登陆的网络请求
-    loginBtn(){
-        console.log(this.refs.code.value);
+    // 看不清换一张
+    changeOne(){
+        this.getYanzheng();
+    }
+    // 用户名的正则匹配
+    userClick(e) {
+        let reg = /^1[0-9]{10}$/;
+        if (!reg.test(e.target.value)) {
+            e.target.style.color = "red"
+            
+        } else {
+            e.target.style.color = "green";
+            e.target.disabled = true;
+            e.target.style.background = "white";
+        }
+    }
+    // 验证码的正则匹配
+    codeClick(e){
+        let reg = /^[0-9]{4}$/;
+        if(reg.test(e.target.value)){
+            e.target.disabled = true;
+            e.target.style.background = "white";
+        }
+    }
+     // 登陆的网络请求
+     loginBtn(){
         let reg = /^1[0-9]{10}$/;
         if(reg.test(this.refs.user.value) && this.refs.pass.value != "" && this.refs.code.value !=""){
         fetch("https://elm.cangdu.org/v2/login",{
@@ -57,27 +82,24 @@ export class Login extends Component {
             return res.json();
         }).then(data=>{
             console.log(data);
+            localStorage.usermsg=JSON.stringify(data);
+            if(data.username){
+                // this.props.history.push("/enter");
+            }else{
+                alert("验证码不正确");
+                this.refs.user.value = "";
+                this.refs.pass.value = "";
+                this.refs.code.value="";
+                return
+            }
+            
         }).catch(err=>{
             console.log(err);
         })
         this.getYanzheng();
         }else{
-            console.log("请输入正确的号码");
+            alert("请输入正确的号码");
             this.getYanzheng();
-        }
-    }
-    // 看不清换一张
-    changeOne(){
-        this.getYanzheng();
-    }
-    // 用户名的正则匹配
-    userClick(e) {
-        let reg = /^1[0-9]{10}$/;
-        console.log(e.target);
-        if (!reg.test(e.target.value)) {
-            e.target.style.color = "red"
-        } else {
-            e.target.style.color = "green"
         }
     }
     // 点击返回
@@ -119,7 +141,7 @@ export class Login extends Component {
                         </span>
                     </div>
                     <div>
-                        <input placeholder="验证码" type="text"  ref="code"/>
+                        <input placeholder="验证码" type="text"  ref="code" onChange={this.codeClick}/>
                         <img src={this.state.yanzhnegma} />
                         <div id="imgRight">
                             <p className="vagueBtn">看不清</p>

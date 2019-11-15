@@ -12,9 +12,9 @@ export class Firsthome extends Component {
         this.state = {
             city: {},
             claasifyArr: [],
-            shops: []
+            shops: [],
+            obj:this.props.history.state
         }
-        // this.clickShops = this.clickShops.bind(this);
     };
     componentWillMount() {
         this.getLocationCity();
@@ -61,11 +61,13 @@ export class Firsthome extends Component {
             console.log(err)
         })
     }
-    // 点击事件
-    clickShops(i) {
+    // 点击进入商铺详情页
+    clickShops(v) {
+        localStorage.shops = JSON.stringify(v);
+        console.log(v);
         this.props.history.push({
             pathname:"/detailShops",
-            state:this.state.shops[i],
+            state:v,
         })
     }
     componentDidUpdate() {
@@ -77,13 +79,17 @@ export class Firsthome extends Component {
             },
         })
     }
+    // 点击城市切换
+    chengeCity(){
+        this.props.history.push("/cityQuery")
+    }
     render() {
         return (
             <div>
                 {/* 头部 */}
                 <div id="header">
                     <span className="el-icon-search back"></span>
-                    <span className="address" onClick={this.chengeCity}>{this.city}</span>
+                    <span className="address" onClick={this.chengeCity}>{this.state.obj.address}</span>
                     <span className="el-icon-star-off mime" onClick={this.login}></span>
                 </div>
                 {/* 轮播图部分 */}
@@ -113,7 +119,7 @@ export class Firsthome extends Component {
                     <p><span class="el-icon-date"></span>附近商家 </p>
                     {
                         this.state.shops.map((v, i) => {
-                            return (<li key={i} id="singleLi" onClick={this.clickShops.bind(this,i)}>
+                            return (<li key={i} id="singleLi" onClick={this.clickShops.bind(this,v)}>
                                 <img src={'//elm.cangdu.org/img/' + v.image_path} />
                                 <div>
                                     <span className="brand">品牌</span>
