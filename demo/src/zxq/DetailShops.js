@@ -15,7 +15,7 @@ export class DetailShops extends Component {
     }
     // 商品和评价的点击事件
     clickShops(e){
-        if(e.target.innerHTML == "商品"){
+        if(e.target.innerHTML === "商品"){
             e.target.style.color="#3190e8";
             this.refs.silde.style.left="0.65rem";
             this.refs.comments.style.color = "#666666";

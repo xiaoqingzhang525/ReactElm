@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11761400",
+      "name": "彩虹",
+      "font_class": "caihong",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "11761401",
+      "name": "大雾",
+      "font_class": "dawu",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "11761405",
+      "name": "龙卷风",
+      "font_class": "longjuanfeng",
+      "unicode": "e71a",
+      "unicode_decimal": 59162
+    },
+    {
+      "icon_id": "11761406",
+      "name": "满月",
+      "font_class": "manyue",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
+    },
+    {
+      "icon_id": "11761408",
+      "name": "旱季",
+      "font_class": "hanji",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    },
+    {
+      "icon_id": "11761413",
+      "name": "温度",
+      "font_class": "wendu",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
+      "icon_id": "11761414",
+      "name": "日落",
+      "font_class": "rila",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    }
+  ]
+}

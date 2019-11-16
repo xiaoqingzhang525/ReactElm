@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import "./assets/reset.css"
 import "./assets/resize"   
+import "../src/icon/iconfont.css"
 
 
-import React, { Component } from 'react'
 import './App.css';
 // 引入路由
 import {BrowserRouter} from "react-router-dom"

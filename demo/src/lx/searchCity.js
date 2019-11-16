@@ -69,9 +69,9 @@ export class searchCity extends Component {
             showList:false
         })
         this.props.history.push({
-            pathname: "/Enter",
-            state: v
+            pathname: "/enter",
         })
+        localStorage.address = JSON.stringify(v);
         this.state.historyData.push(v);
         console.log(this.state.historyData);
         localStorage.setItem("asd", JSON.stringify(this.state.historyData))
