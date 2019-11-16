@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import "./assets/reset.css"
 import "./assets/resize"   
+import "../src/icon/iconfont.css"
 
 
 import './App.css';

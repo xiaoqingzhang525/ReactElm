@@ -66,7 +66,7 @@ export class Login extends Component {
      // 登陆的网络请求
      loginBtn(){
         let reg = /^1[0-9]{10}$/;
-        if(reg.test(this.refs.user.value) && this.refs.pass.value != "" && this.refs.code.value !=""){
+        if(reg.test(this.refs.user.value) && this.refs.pass.value !== "" && this.refs.code.value !==""){
         fetch("https://elm.cangdu.org/v2/login",{
             method:"post",
             credentials:"include",

@@ -23,7 +23,7 @@ export class Enter extends Component {
             <div>
                 <header>
                 <Switch>
-                    <Redirect from="/enter" to="/enter/firsthome"/>>
+                    <Redirect from="/enter" to="/enter/firsthome"/>
                 </Switch>
                   <Route path="/enter/firsthome" component={ Firsthome }/>    
                 </header>

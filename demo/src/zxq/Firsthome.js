@@ -6,6 +6,7 @@ import { Rate } from 'element-react';
 import 'element-theme-default';
 import {withRouter} from "react-router-dom"
 
+  
 export class Firsthome extends Component {
     constructor(props) {
         super(props)
@@ -13,7 +14,7 @@ export class Firsthome extends Component {
             city: {},
             claasifyArr: [],
             shops: [],
-            obj:this.props.history.state
+            obj:JSON.parse(localStorage.address),
         }
     };
     componentWillMount() {
@@ -89,8 +90,9 @@ export class Firsthome extends Component {
                 {/* 头部 */}
                 <div id="header">
                     <span className="el-icon-search back"></span>
-                    <span className="address" onClick={this.chengeCity}>{this.state.obj.address}</span>
-                    <span className="el-icon-star-off mime" onClick={this.login}></span>
+                    <span className="address" onClick={this.chengeCity}><i className="iconfont icon-rila"></i>{this.state.obj.address}</span>
+                    <span  onClick={this.login}></span>
+                    <i className="icon icon-rila"></i>
                 </div>
                 {/* 轮播图部分 */}
                 <div className="swiper-container">
