@@ -69,7 +69,7 @@ export class searchCity extends Component {
             showList:false
         })
         this.props.history.push({
-            pathname: "/Enter",
+            pathname: "/enter/firsthome",
             state: v
         })
         this.state.historyData.push(v);

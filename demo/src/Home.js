@@ -7,6 +7,7 @@ import DetailShops from './zxq/DetailShops'
 import Login from './zxq/Login'
 import CityQuery from './lx/cityQuery'
 import SearchCity from './lx/searchCity'
+import Punctuality from './lx/punctuality'
 
 export class Home extends Component {
     constructor(props) {
@@ -19,13 +20,14 @@ export class Home extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path="/login" component={Login}/>
+                    <Route path="/login" component={Login} />
                     <Route path="/enter" component={Enter} />
                     <Route path="/detailShops" component={DetailShops} />
-                    <Route path="/" component={CityQuery} exact/>
-                    <Route path="/cityQuery" component={CityQuery}/>
-                 <Route path="/searchCity" component={SearchCity}/>
-                </Switch> 
+                    <Route path="/" component={CityQuery} exact />
+                    <Route path="/cityQuery" component={CityQuery} />
+                    <Route path="/searchCity" component={SearchCity} />
+                    <Route path="/punctuality" component={Punctuality} />
+                </Switch>
             </div>
         )
     }
